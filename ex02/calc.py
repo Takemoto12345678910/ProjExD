@@ -1,11 +1,11 @@
 import tkinter as tk 
-fonts=("", 18) 
+fonts=("", 30) 
 
 class Calculator(tk.Frame):
     def __init__(self, master = None):
         tk.Frame.__init__(self, master)
         self.master.geometry()
-        self.master.title('超高機能電卓') # ウィンドウタイトル
+        self.master.title('') # ウィンドウタイトル
         self.entry = tk.Entry(self.master, justify='right', font=fonts) # テキストボックス
         self.creat_widgets()
 
