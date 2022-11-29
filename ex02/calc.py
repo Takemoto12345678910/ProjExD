@@ -1,11 +1,11 @@
 import tkinter as tk 
-fonts=("", 30) 
+fonts=("", 18) 
 
 class Calculator(tk.Frame):
     def __init__(self, master = None):
         tk.Frame.__init__(self, master)
         self.master.geometry()
-        self.master.title('') # ウィンドウタイトル
+        self.master.title('超高機能電卓') # ウィンドウタイトル
         self.entry = tk.Entry(self.master, justify='right', font=fonts) # テキストボックス
         self.creat_widgets()
 
@@ -54,16 +54,26 @@ class Calculator(tk.Frame):
         self.entry.grid(row=0, column=0, ipady=10, columnspan=4, sticky='nsew')
         
         # 各ボタンの処理
-        tk.Button(self.master, text='×', font=fonts, width=10, height=2, command=self.input('×')).grid(row=2, column=3)
-        tk.Button(self.master, text='－', font=fonts, width=10, height=2, command=self.input('－')).grid(row=3, column=3)
-        tk.Button(self.master, text='＋', font=fonts, width=10, height=2, command=self.input('＋')).grid(row=4, column=3)
-        tk.Button(self.master, text='＝', font=fonts, width=10, height=2, command=lambda: self.equals()).grid(row=5, column=3)
-        tk.Button(self.master, text='÷', font=fonts, width=10, height=2, command=self.input('÷')).grid(row=1, column=3)
-        tk.Button(self.master, text='%', font=fonts, width=10, height=2, command=lambda: self.one_hundredth()).grid(row=1, column=0)
-        tk.Button(self.master, text='CE', font=fonts, width=10, height=2, command=lambda: self.clear_all()).grid(row=1, column=1)
-        tk.Button(self.master, text='←', font=fonts, width=10, height=2, command=lambda: self.clear_one()).grid(row=1, column=2)
-        tk.Button(self.master, text='0', font=fonts, width=21, height=2, command=self.input('0')).grid(row=5, column=0, columnspan=2)
-        tk.Button(self.master, text='.', font=fonts, width=10, height=2, command=self.input('.')).grid(row=5, column=2)
+        tk.Button(self.master, text='×', font=fonts, width=10, height=2, 
+        command=self.input('×')).grid(row=2, column=3)
+        tk.Button(self.master, text='－', font=fonts, width=10, height=2, 
+        command=self.input('－')).grid(row=3, column=3)
+        tk.Button(self.master, text='＋', font=fonts, width=10, height=2, 
+        command=self.input('＋')).grid(row=4, column=3)
+        tk.Button(self.master, text='＝', font=fonts, width=10, height=2, 
+        command=lambda: self.equals()).grid(row=5, column=3)
+        tk.Button(self.master, text='÷', font=fonts, width=10, height=2, 
+        command=self.input('÷')).grid(row=1, column=3)
+        tk.Button(self.master, text='%', font=fonts, width=10, height=2, 
+        command=lambda: self.one_hundredth()).grid(row=1, column=0)
+        tk.Button(self.master, text='CE', font=fonts, width=10, height=2, 
+        command=lambda: self.clear_all()).grid(row=1, column=1)
+        tk.Button(self.master, text='←', font=fonts, width=10, height=2, 
+        command=lambda: self.clear_one()).grid(row=1, column=2)
+        tk.Button(self.master, text='0', font=fonts, width=21, height=2, 
+        command=self.input('0')).grid(row=5, column=0, columnspan=2)
+        tk.Button(self.master, text='.', font=fonts, width=10, height=2, 
+        command=self.input('.')).grid(row=5, column=2)
 
 calc = Calculator(tk.Tk())
 calc.mainloop()
