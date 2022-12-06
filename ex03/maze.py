@@ -1,6 +1,10 @@
 import tkinter as tk
 import maze_maker as mm
 
+# キャンバスのサイズ設定
+CANVAS_WIDTH = 600
+CANVAS_HEIGHT = 400
+
 def key_down(event):
     global key
     key = event.keysym
@@ -17,7 +21,7 @@ def main_proc():
     if key == "Down": my += 1
     if key == "Left": mx -= 1
     if key == "Right": mx += 1
-    if maze_lst[mx][my] == 1: # 移動先が壁だったら
+    if maze_lst[mx][my] == 1: #移動先が壁だったら
         if key == "Up": my += 1
         if key == "Down": my -= 1
         if key == "Left": mx += 1
@@ -30,7 +34,7 @@ def main_proc():
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("迷えるこうかとん")
-    canvas = tk.Canvas(root, width=1500, height=900, bg="black")
+    canvas = tk.Canvas(root, width=1500, height=900, bg="blue") #背景を青色に変更
     canvas.pack()
 
     maze_lst = mm.make_maze(15, 9)
@@ -39,7 +43,7 @@ if __name__ == "__main__":
 
     mx, my = 1, 1
     cx, cy = mx*100+50, my*100+50
-    tori = tk.PhotoImage(file="fig/8.png")
+    tori = tk.PhotoImage(file="fig/3.png") #画像変更
     canvas.create_image(cx, cy, image=tori, tag="kokaton")
     key = ""
     root.bind("<KeyPress>", key_down)
