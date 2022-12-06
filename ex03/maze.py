@@ -3,7 +3,7 @@ import maze_maker as mm
 
 # キャンバスのサイズ設定
 CANVAS_WIDTH = 600
-CANVAS_HEIGHT = 200
+CANVAS_HEIGHT = 400
 
 def key_down(event):
     global key
