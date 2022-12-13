@@ -40,7 +40,7 @@ def main():
     #爆弾の大きさを拡大した
     bomb_sfc = pg.Surface((20, 20)) # 正方形の空のSurface
     bomb_sfc=pg.image.load("./ex04/fig/bomb.png")#爆弾の画像を描画
-    bomb_sfc=pg.transform.rotozoom(bomb_sfc, 0, 0.5)#画像の大きさを調整
+    bomb_sfc=pg.transform.rotozoom(bomb_sfc, 0, 0.15)#画像の大きさを調整
     bomb_sfc.set_colorkey((0, 0, 0))
     
     bomb_rct = bomb_sfc.get_rect()
