@@ -22,7 +22,7 @@ def main():
     #背景画像を変更した
     #背景画像の大きさを変えた
     pg.display.set_caption("逃げろ！こうかとん")
-    scrn_sfc = pg.display.set_mode((1500, 900))
+    scrn_sfc = pg.display.set_mode((1500, 1000))
     scrn_rct = scrn_sfc.get_rect()
     pgbg_sfc = pg.image.load("fig/a.jpg")
     pgbg_rct = pgbg_sfc.get_rect()
