@@ -22,7 +22,7 @@ def main():
     #背景画像を変更した
     #背景画像の大きさを変えた
     pg.display.set_caption("逃げろ！こうかとん")
-    scrn_sfc = pg.display.set_mode((1500, 1000))
+    scrn_sfc = pg.display.set_mode((1500, 900))
     scrn_rct = scrn_sfc.get_rect()
     pgbg_sfc = pg.image.load("fig/a.jpg")
     pgbg_rct = pgbg_sfc.get_rect()
@@ -40,7 +40,7 @@ def main():
     #爆弾の大きさを拡大した
     bomb_sfc = pg.Surface((20, 20)) # 正方形の空のSurface
     bomb_sfc=pg.image.load("./ex04/fig/bomb.png")#爆弾の画像を描画
-    bomb_sfc=pg.transform.rotozoom(bomb_sfc, 0, 0.15)#画像の大きさを調整
+    bomb_sfc=pg.transform.rotozoom(bomb_sfc, 0, 0.5)#画像の大きさを調整
     bomb_sfc.set_colorkey((0, 0, 0))
     
     bomb_rct = bomb_sfc.get_rect()
