@@ -66,7 +66,7 @@ class Bomb:
         #赤い点から爆弾の画像に変更した
         #爆弾の大きさを拡大した
         self.sfc = pg.image.load("./ex04/fig/bomb.png")
-        self.sfc = pg.transform.rotozoom(self.sfc, 0, 0.5)#画像の大きさを調整
+        self.sfc = pg.transform.rotozoom(self.sfc, 0, 0.15)#画像の大きさを調整
         self.sfc.set_colorkey((0, 0, 0))
         #pg.draw.circle(self.sfc, color, (rad, rad), rad)
         self.rct = self.sfc.get_rect()
