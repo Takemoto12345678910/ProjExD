@@ -66,7 +66,7 @@ class Bomb:
         #赤い点から爆弾の画像に変更した
         #爆弾の大きさを拡大した
         self.sfc = pg.image.load("./ex04/fig/bomb.png")
-        self.sfc = pg.transform.rotozoom(self.sfc, 0, 0.15)#画像の大きさを調整
+        self.sfc = pg.transform.rotozoom(self.sfc, 0, 0.5)#画像の大きさを調整
         self.sfc.set_colorkey((0, 0, 0))
         #pg.draw.circle(self.sfc, color, (rad, rad), rad)
         self.rct = self.sfc.get_rect()
@@ -105,7 +105,7 @@ def main():
     # 練習１
     #背景画像を変更した
     #背景画像の大きさを変えた
-    scr = Screen("逃げろ！こうかとん", (1500,1000), "fig/a.jpg")
+    scr = Screen("逃げろ！こうかとん", (1500,900), "fig/a.jpg")
 
     # 練習３
     kkt = Bird("fig/6.png", 2.0, (900,400))
